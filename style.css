@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background: rgb(232, 245, 251);
+    background: linear-gradient(0deg, rgba(232, 245, 251, 1) 2%, rgba(209, 231, 247, 1) 33%, rgba(162, 207, 238, 1) 75%);
+    min-height: 100%;
+   
+}
+.flower-image{  
+    background-image: url("/number-guessing-game/img/flower.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+html,
+body {
+    height: 100%
+}
+
+.inputStyle {
+    padding: 1rem;
+}
+
+.banner {
+    background-color:#2f3339;
+    padding: 2rem;
+    margin: 0 auto;
+    color: white;
+}
+
+#userNum {
+    text-align: center;
+    width: 84px;
+    height: 84px;
+    font-size: 64px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form {
+    max-width: 880px;
+    display: inline-block;
+    background-color: #99cc41;
+    width: 700px;
+    height: 100%;
+}
+
+button {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: #99cc41;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    border: white 2px solid;
+    transition-duration: .3s;
+    font-size: 14px;
+    outline: none;
+}
+button:disabled {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: #99cc415e;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.377);
+    font-weight: bold;
+    margin: auto;
+    border: rgba(255, 255, 255, 0.377) 2px solid;
+    transition-duration: .3s;
+    font-size: 14px;
+}
+button:disabled:hover {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: #99cc415e;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.377);
+    font-weight: bold;
+    margin: auto;
+    border: rgba(255, 255, 255, 0.377) 2px solid;
+    transition-duration: .3s;
+    font-size: 14px;
+}
+button:disabled:hover .far {
+    color: #ffffff56;
+}
+
+button:hover {
+    transform-origin: center;
+    padding: 5px;
+    width: 120px;
+    height: 120px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    color: firebrick;
+    font-weight: bold;
+    margin: auto;
+    transition-duration: .3s;
+    font-size: 14px;
+}
+button:hover .far {
+    color: #2f3339;
+}
+
+.grey{
+    color: #2f3339;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    font-weight: bold;
+    padding: 10px;
+}
+
+.buttons div {
+    margin: 10px;
+}
+
+
+#reset {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#feedback{
+    display: inline-block;
+    color: #2f3339;
+}
+
+.timeback{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 0;
+    justify-self: center;
+    flex-direction: row;
+    align-items: center;
+}
+#timecount{
+    padding-top: 25px;
+}
