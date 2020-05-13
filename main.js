@@ -5,19 +5,28 @@ let message = ""
 let userNum = 0
 let history = []
 let guess3 = 3
-
+let gameLog = []
 
 
 function guess() {
     userNum = document.getElementById("userNum").value;
     if (userNum < 1 || userNum > 22) {
-        message = "Please pick a number 1-21"
+        document.getElementById("response").innerHTML = "Please pick a number 1-21"
+        return;
+    }
+    else if(userNum == history[0] ||userNum == history[1] ||userNum == history[2]){
+        document.getElementById("response").innerHTML = "You already guessed that number"
+        return;
+    
     } else if (userNum > compNum) {
         message = "Your guess is too high";
+        time = 30
     } else if (userNum < compNum) {
         message = "Your guess is too low";
+        time = 30
     } else if (userNum == compNum) {
-        message = "WINNER!!!";
+        message = "Winner!"
+        gameLog.push("win")
         button.disabled = true
     }
     document.getElementById("response").innerHTML = `${message}`
@@ -27,10 +36,12 @@ function guess() {
     document.getElementById("guessNum").innerHTML = `${guess3}`
     if (guess3 == 0) {
         message = "Game Over"
-        document.getElementById("response").innerHTML = `${message}`
         button.disabled = true
+        gameLog.push("loss")
     }
-    console.log("Attempts left:", guess3)
+    document.getElementById("gameLog").innerHTML = `${gameLog}`
+    console.log("History:", history)
+    console.log("Game Log:", gameLog)
 }
 
 function reset() {
@@ -42,9 +53,10 @@ function reset() {
     document.getElementById("history").innerHTML = `${history}`
     message = ""
     document.getElementById("response").innerHTML = `${message}`
+    time=30
     button.disabled = false
 }
-let time = 3
+let time = 30
 let myTime
 
 function timecounting() {
