@@ -54,13 +54,6 @@ function timecounting() {
     }, 1000)
 }
 timecounting()
-timeUp()
-function timeUp(){
-    while (time > 0){
-        message = "Time Up"
-        button.disabled = true
-    }
-}
 
 
 
